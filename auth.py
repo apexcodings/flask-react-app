@@ -1,3 +1,8 @@
+"""
+This file is also controller like file which takes auth request and respond defines
+what happens
+"""
+
 from flask_restx import Resource, Namespace, fields
 from models import User
 from werkzeug.security import generate_password_hash, check_password_hash

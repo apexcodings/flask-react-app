@@ -1,3 +1,8 @@
+"""
+this file is like the controller file that takes specfic requests/routes and 
+determines what action/response happens
+"""
+
 from flask_restx import Namespace, Resource, fields
 from models import Recipe
 from flask_jwt_extended import jwt_required

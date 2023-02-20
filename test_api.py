@@ -7,12 +7,10 @@ from exts import db
 class APITestCase(unittest.TestCase):
     def setUp(self):
         self.app = create_app(TestConfig)
-
         self.client = self.app.test_client(self)
 
         with self.app.app_context():
             db.init_app(self.app)
-
             db.create_all()
 
     def test_hello_world(self):
@@ -91,7 +89,7 @@ class APITestCase(unittest.TestCase):
         login_response = self.client.post(
             "auth/login", json={"username": "testuser", "password": "password"}
         )
-
+        # this is because jwt is required to make this action
         access_token = login_response.json["access_token"]
 
         create_recipe_response = self.client.post(

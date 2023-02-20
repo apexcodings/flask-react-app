@@ -1,6 +1,21 @@
 from exts import db
 
 
+
+"""
+sulphurs comment
+this model.py file defines the number of models 
+you want to have in the application
+For each model, you have the table
+It specifies the datatype for each column of the table
+A class is a table of data
+Object of the class is a row in the table
+The things that can be done to a row of data/ object of class are defined as methods in the class
+
+
+"""
+
+
 """
 class Recipe:
     id:int primary key
